@@ -4,15 +4,14 @@ const { privateKeyToAccount } = require('viem/accounts');
 const { sepolia } = require ('viem/chains')
 const  dotenv  = require ('dotenv')
 
-const server = httpNode.createServer((req, res) => {
+/*const server = httpNode.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end('Ping bot is working well!\n');
 });
 
 server.listen(3000, '127.0.0.1', () => {
   console.log('Listening on 127.0.0.1:3000');
-  pingpong();
-});
+});*/
 
 dotenv.config();
 const privateKey = process.env.PRIVATE_KEY;
@@ -74,3 +73,5 @@ const pingpong = () => {
     }
   });
 }
+
+pingpong();
