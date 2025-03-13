@@ -42,7 +42,7 @@ const contract = getContract({
   client
 });
 
-let currentBlockNumber = 7900000n;
+let currentBlockNumber = 7894000n;
 
 const pingpong = () => {
   console.log("ping pong bot launched from block number : " + currentBlockNumber);
