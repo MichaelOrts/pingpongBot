@@ -1,10 +1,10 @@
-const http = require('node:http');
+const httpNode = require('node:http');
 const { createPublicClient, http, getContract, createWalletClient } = require('viem');
 const { privateKeyToAccount } = require('viem/accounts');
 const { sepolia } = require ('viem/chains')
 const  dotenv  = require ('dotenv')
 
-const server = createServer((req, res) => {
+const server = httpNode.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end('Ping bot is working well!\n');
 });
