@@ -11,6 +11,7 @@ const server = httpNode.createServer((req, res) => {
 
 server.listen(3000, '127.0.0.1', () => {
   console.log('Listening on 127.0.0.1:3000');
+  pingpong();
 });
 
 dotenv.config();
@@ -42,7 +43,7 @@ const contract = getContract({
   client
 });
 
-let currentBlockNumber = 7894000n;
+let currentBlockNumber = 7890000n;
 
 const pingpong = () => {
   console.log("ping pong bot launched from block number : " + currentBlockNumber);
@@ -73,6 +74,3 @@ const pingpong = () => {
     }
   });
 }
-
-pingpong();
-console.log(contract)
