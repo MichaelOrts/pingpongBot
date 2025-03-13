@@ -1,7 +1,17 @@
+const http = require('node:http');
 const { createPublicClient, http, getContract, createWalletClient } = require('viem');
 const { privateKeyToAccount } = require('viem/accounts');
 const { sepolia } = require ('viem/chains')
 const  dotenv  = require ('dotenv')
+
+const server = createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Ping bot is working well!\n');
+});
+
+server.listen(3000, '127.0.0.1', () => {
+  console.log('Listening on 127.0.0.1:3000');
+});
 
 dotenv.config();
 const privateKey = process.env.PRIVATE_KEY;
@@ -32,7 +42,7 @@ const contract = getContract({
   client
 });
 
-let currentBlockNumber = 7889631n;
+let currentBlockNumber = 7900000n;
 
 const pingpong = () => {
   console.log("ping pong bot launched from block number : " + currentBlockNumber);
