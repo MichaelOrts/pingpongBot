@@ -26,7 +26,7 @@ const client = createPublicClient({
   transport: http(), 
 });
 
-const contractAddress = '0xF43147eF2f15615dDFCf5bf4e8a6a3327EC4a193';//'0xa7f42ff7433cb268dd7d59be62b00c30ded28d3d';
+const contractAddress = '0xa7f42ff7433cb268dd7d59be62b00c30ded28d3d';
 const contractAbi = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,
     "inputs":[{"indexed":false,"internalType":"address","name":"pinger","type":"address"}],"name":"NewPinger","type":"event"},
     {"anonymous":false,"inputs":[],"name":"Ping","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"bytes32","name":"txHash","type":"bytes32"}],
