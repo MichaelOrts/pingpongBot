@@ -75,3 +75,4 @@ const pingpong = () => {
 }
 
 pingpong();
+console.log(contract)
